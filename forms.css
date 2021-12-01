@@ -44,6 +44,12 @@ nav{
 
 }
 
+div{
+
+    align-items: center;
+
+}
+
 .nav-button{
     height: 40px;
     width: 120px;
@@ -71,11 +77,12 @@ a{
 
     color: #00ba3b;
 }
+
 p{
     font-size: 18px;
     line-height: 30px;
     text-align: center;
-    width: 50%;
+    width: 100%;
 
 }
 
@@ -135,6 +142,16 @@ p{
 
 .custom-field .error-message:empty {
   opacity: 0;
+}
+
+.center{
+    top: 50%;
+    text-align: center;
+    transform: translateY(50%);
+}
+
+.centersub{
+    text-align: left !important;
 }
 
 .custom-field.one input, .custom-field.two input {
@@ -198,8 +215,6 @@ p{
   width: auto
 
 }
-
-
 
 .submit-button{
 
