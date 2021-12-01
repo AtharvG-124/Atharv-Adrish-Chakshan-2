@@ -1,0 +1,62 @@
+body{
+
+    background-size: cover;
+    background: #373837;
+    position: relative;
+    bottom: 10px;
+    right: 10px;
+	display: flex;
+	flex-direction: column;
+	letter-spacing: 1px;
+	font-family: "Optima", sans-serif;
+}
+
+.logo{
+    cursor: pointer;
+    font-family: "Optima", sans-serif;
+    color: green;
+    padding-left: 20px;
+    border: none;
+    font-weight: bold;
+    color: #00e029;
+    font-size:calc(12px + 1.5vw);
+    background: none;
+    float: left;
+
+}
+
+nav {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+}
+
+.nav-button{
+    position: relative;
+    cursor: pointer;
+    height: 40px;
+    width: 120px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    float: right;
+    padding-left: min(10px, 5%);
+    font-family: "Optima", sans-serif;
+    font-size:calc(12px + 6px);
+    margin-left: 10px;
+    background: none;
+    transition: background 0.5s ease-in-out;
+
+}
+
+.nav-button:hover{
+    background: #00ba3b;
+    color: white;
+    border-color: #00ba3b;
+    transition-delay: 0.1s;
+}
