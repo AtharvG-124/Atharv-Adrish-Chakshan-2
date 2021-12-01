@@ -1,0 +1,229 @@
+body{
+
+    background: url(Food_main_img.png) no-repeat;
+    background-size: cover;
+    background: #373837;
+    position: relative;
+    bottom: 10px;
+    right: 10px;
+	display: flex;
+	align-items: center;
+	color: #fff;
+	flex-direction: column;
+	letter-spacing: 1px;
+	font-family: "Optima", sans-serif;
+}
+
+.logo{
+    cursor: pointer;
+    font-family: "Optima", sans-serif;
+    color: green;
+    height: 40px;
+    width: 200px;
+    padding-left: 10px;
+    border: none;
+    font-weight: bold;
+    color: #00e029;
+    font-size: 30px;
+    background: none;
+    float: left;
+
+}
+
+nav{
+
+    position: fixed;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+
+}
+
+.nav-button{
+    height: 40px;
+    width: 120px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    float: right;
+    margin-left: 7px;
+    margin-right: 7px;
+    font-family: "Optima", sans-serif;
+    font-size: 18px;
+    background: none;
+    transition: background 0.5s ease-in-out;
+
+}
+
+.nav-button:hover{
+    background: #00ba3b;
+    color: white;
+    border-color: #00ba3b;
+    transition-delay: 0.1s;
+}
+
+a{
+
+    color: #00ba3b;
+}
+p{
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    width: 50%;
+
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.custom-field {
+  position: relative;
+  font-size: 14px;
+  border-top: 20px solid transparent;
+  margin-bottom: 5px;
+  --field-padding: 12px;
+}
+
+.custom-field input {
+
+  padding: var(--field-padding);
+  border-radius: 3px;
+  width: 250px;
+  outline: none;
+  color: black;
+  font-size: 14px;
+
+}
+
+.custom-field .placeholder {
+  position: absolute;
+  left: var(--field-padding);
+  width: calc(100% - (var(--field-padding) * 2));
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  top: 24px;
+  font-family: "Optima", sans-serif;
+  font-weight: bold;
+  line-height: 100%;
+  transform: translateY(-21px);
+  color: #00ba3b;
+  transition:
+    top 0.3s ease,
+    color 0.3s ease,
+    font-size 0.3s ease;
+}
+
+
+.custom-field .error-message {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  font-size: 12px;
+  background: #d30909;
+  color: black;
+  height: 24px;
+}
+
+.custom-field .error-message:empty {
+  opacity: 0;
+}
+
+.custom-field.one input, .custom-field.two input {
+    border-radius: 10px;
+    border: none;
+    z-index: 100;
+    font-family: "Optima", sans-serif;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-overflow: ellipsis;
+    color: #00ba3b;
+    height: 50px;
+    width: 320px;
+    outline: none;
+    box-shadow: -5px 8px rgba(0, 0, 0, 0.2);
+    border: rgba(255, 255, 255, 0.2);
+    transition: border-color 0.3s ease;
+}
+
+.custom-field.one input + .placeholder {
+  left: 8px;
+  padding: 0 5px;
+}
+
+.custom-field.one input.dirty,
+.custom-field.one input:not(:placeholder-shown),
+.custom-field.one input:focus,
+.custom-field.two input.dirty,
+.custom-field.two input:not(:placeholder-shown),
+.custom-field.two input:focus{
+
+  border: 2px solid #00ba3b;
+  transition-delay: 0.1s
+}
+
+.custom-field.one input.dirty + .placeholder,
+.custom-field.one input:not(:placeholder-shown) + .placeholder,
+.custom-field.one input:focus + .placeholder {
+  top: 0;
+  font-size: 11px;
+  color: #00ba3b;
+  background: #373837;
+  border-radius: 5px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  width: auto
+}
+
+.custom-field.two input.dirty + .placeholder,
+.custom-field.two input:not(:placeholder-shown) + .placeholder,
+.custom-field.two input:focus + .placeholder {
+  top: 0;
+  font-size: 10px;
+  color: #222;
+  background: rgb(252 172 90);
+  border-radius: 5px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  width: auto
+
+}
+
+
+
+.submit-button{
+
+    border: 2px solid #ffffff;
+    height: 50px;
+    width: 150px;
+    margin: 10px;
+    font-family: "Optima", sans-serif;
+    font-weight: bold;
+    border-radius: 100px;
+    font-size: 14px;
+    background: none;
+    color: white;
+    transition: background 0.5s ease-in-out;
+
+}
+
+.submit-button:hover{
+    background: #00ba3b;
+    color: white;
+    border-color: #00ba3b;
+    transition-delay: 0.1s;
+}
+
+::placeholder {
+  color: black;
+}
