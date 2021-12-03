@@ -6,7 +6,7 @@ body{
     bottom: 10px;
     right: 10px;
 	display: flex;
-	flex-direction: column;
+	flex-direction: none;
 	letter-spacing: 1px;
 	font-family: "Optima", sans-serif;
 }
@@ -19,44 +19,54 @@ body{
     border: none;
     font-weight: bold;
     color: #00e029;
-    font-size:calc(12px + 1.5vw);
+    font-size:calc(10px + 1.5vw);
     background: none;
     float: left;
 
 }
 
-nav {
+#head-img, img{
+
+    width: 101.2%;
+    max-height: 700px;
+    object-fit: cover;
+    object-position: 10% 50%;
+}
+
+nav{
     position: fixed;
     z-index: 5;
     width: 100%;
     padding-right: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
-    background: rgba(0,0,0,0.5);
     backdrop-filter: blur(4px);
+    background: rgba(0,0,0,0.5);
+    
 }
 
 .nav-button{
     position: relative;
     cursor: pointer;
-    height: 40px;
-    width: 120px;
+    min-height: 40px;
+    min-width: 120px;
     border: none;
     border-radius: 10px;
     color: white;
     float: right;
     padding-left: min(10px, 5%);
     font-family: "Optima", sans-serif;
-    font-size:calc(12px + 6px);
-    margin-left: 10px;
+    font-size:calc(5px + 1vw);
+    margin-left: 5px;
+    margin-right: 5px;
     background: none;
     transition: background 0.5s ease-in-out;
 
 }
 
 .nav-button:hover{
-    background: #00ba3b;
+    background: #009930;
     color: white;
-    border-color: #00ba3b;
+    border-color: #009930;
     transition-delay: 0.1s;
 }
