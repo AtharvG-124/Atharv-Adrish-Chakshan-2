@@ -77,6 +77,16 @@ p {
   width: 100%;
 }
 
+img {
+  border-radius: 5%;
+  /* box-shadow: -8px 8px 5px rgb(14, 14, 14); */
+  border: 0.5rem solid #222;
+}
+
+h1 {
+  margin: 0.5rem 0;
+}
+
 *,
 *::before,
 *::after {
@@ -152,7 +162,7 @@ p {
   text-overflow: ellipsis;
   color: #00ba3b;
   height: 50px;
-  width: 320px;
+  width: 100%;
   outline: none;
   box-shadow: -5px 8px rgba(0, 0, 0, 0.2);
   border: rgba(255, 255, 255, 0.2);
@@ -202,11 +212,15 @@ p {
   width: auto;
 }
 
+.form-input {
+  width: 100%;
+}
+
 .submit-button {
   border: 2px solid #ffffff;
   height: 50px;
-  width: 150px;
-  margin: 10px;
+  width: 100%;
+  margin: 1% auto;
   font-family: "Optima", sans-serif;
   font-weight: bold;
   border-radius: 100px;
@@ -227,15 +241,17 @@ p {
   color: black;
 }
 
-.feature_img img {
-  margin-right: 0;
-  float: left;
+.feature_img {
+  /* margin-right: 0;
+  float: right;
   margin: 50px;
+  width: 50%; */
+  padding: 2%;
+  margin: auto;
 }
 
 .signin {
-  margin-top: 25%;
-  margin-left: 25%;
+  margin: 10% 5%;
   /* margin: 0;
   position: absolute;
   top: 50%;
@@ -244,11 +260,18 @@ p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  background-color: rgb(14, 14, 14);
+  padding: 2.5%;
+  border-radius: 2%;
 }
 
 .main {
-  background-color: rgb(19, 19, 19);
-  padding: 50px;
+  background-color: #222;
+  padding: 5%;
+  margin: 2%;
   border-radius: 10px;
-  box-shadow: -8px 8px 5px rgb(14, 14, 14);
+  /* box-shadow: -8px 8px 5px rgb(14, 14, 14); */
+  float: left;
+  width: 50%;
+  align-items: center;
 }
