@@ -69,7 +69,9 @@ Calendar CSS
 .container {
     width: 100%;
     height: 100vh;
-    background-color: #12121f;
+    float: right;
+    margin-top: 100px;
+    /* background-color: #373837; */
     color: #eee;
     display: flex;
     justify-content: center;
@@ -81,10 +83,14 @@ Calendar CSS
     height: 52rem;
     background-color: #222227;
     box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
   
 .month {
-    width: 100%;
+    /* width: 91.15%; */
     height: 12rem;
     background-color: #167e56;
     display: flex;
@@ -93,6 +99,8 @@ Calendar CSS
     padding: 0 2rem;
     text-align: center;
     text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
   
 .month i {
@@ -113,7 +121,6 @@ Calendar CSS
 }
   
 .weekdays {
-    width: 100%;
     height: 5rem;
     padding: 0 0.4rem;
     display: flex;
