@@ -25,12 +25,22 @@ body{
 
 }
 
-#head-img, img{
 
+#slider{
+    overflow: hidden;
+}
+
+#slider figure img{   
     width: 101.2%;
     max-height: 700px;
     object-fit: cover;
     object-position: 10% 50%;
+}
+#slider figure{
+    display: flex;
+    position: relative;
+    left: 0;
+    margin: 0;
 }
 
 nav{
@@ -40,7 +50,6 @@ nav{
     padding-right: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
-
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     background: rgba(0,0,0,0.5);
