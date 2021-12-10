@@ -1,3 +1,5 @@
+//Calendar Script
+
 const date = new Date();
 
 const renderCalendar = () => {
@@ -77,3 +79,12 @@ document.querySelector(".next").addEventListener("click", () => {
 });
 
 renderCalendar();
+
+// Modal Script
+function openModal(){
+  document.getElementById().style.display("block");
+}
+
+function closeModal(){
+  document.getElementById().style.display("none");
+}

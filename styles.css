@@ -9,7 +9,7 @@ body{
 	display: flex;
 	flex-direction: column;
 	letter-spacing: 1px;
-	font-family: "Optima", sans-serif;
+	font-family: "Quicksand", sans-serif;
 }
 
 .logo{
@@ -161,7 +161,8 @@ Calendar CSS
   
 .days div:hover:not(.today) {
     background-color: #262626;
-    border: 0.2rem solid #777;
+    outline: 0.2rem solid #777;
+    /* margin: -0.2rem; */
     cursor: pointer;
 }
   
@@ -173,3 +174,5 @@ Calendar CSS
 .today {
     background-color: #167e56;
 }
+
+/* Modal Container CSS */
