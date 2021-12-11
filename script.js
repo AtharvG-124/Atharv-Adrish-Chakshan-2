@@ -78,8 +78,6 @@ document.querySelector(".next").addEventListener("click", () => {
   renderCalendar();
 });
 
-renderCalendar();
-
 // Modal Script
 function openModal(){
   document.getElementById().style.display("block");
@@ -88,3 +86,6 @@ function openModal(){
 function closeModal(){
   document.getElementById().style.display("none");
 }
+
+renderCalendar();
+
