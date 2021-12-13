@@ -80,11 +80,11 @@ document.querySelector(".next").addEventListener("click", () => {
 
 // Modal Script
 function openModal(){
-  document.getElementById().style.display("block");
+  document.getElementById("myModal").style.display = "block";
 }
 
 function closeModal(){
-  document.getElementById().style.display("none");
+  document.getElementById("myModal").style.display = "none";
 }
 
 renderCalendar();
