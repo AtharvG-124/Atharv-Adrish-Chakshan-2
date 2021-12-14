@@ -160,7 +160,7 @@ Calendar CSS
     border-radius: 25px;
 }
   
-.days div:hover(.today){
+.days div:hover:not(:not(.today)){
     background-color: #005207;
     outline: 0.2rem solid rgb(2, 226, 58);
     /* margin: -0.2rem; */
@@ -213,4 +213,5 @@ Calendar CSS
     right: 25px;
     font-size: 35px;
     font-weight: bold;
+    cursor: pointer;
   }
