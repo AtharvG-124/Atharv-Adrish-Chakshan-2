@@ -25,9 +25,9 @@ body{
 
 }
 
-#head-img, img{
+#owl-demo, img{
 
-    width: 100%;
+    width: 100.6%;
     max-height: 780px;
     object-fit: cover;
     object-position: 10% 50%;
