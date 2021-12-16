@@ -116,8 +116,9 @@
 <!-- PHP CODE FOR FORM ABOVE BELOW  -->
 <?php
 
-$connection = mysqli_connect("localhost", "root", "", "calendardb", 80);
-// $db = mysqli_select_db($connection, 'calendardb');
+$connection = mysqli_connect("localhost", "root", ""); 
+// , "calendardb", 80);
+$db = mysqli_select_db($connection, 'calendardb');
 if(isset($_POST['insert']))
 {
     $meal = $_POST['meal'];

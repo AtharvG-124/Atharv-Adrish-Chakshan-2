@@ -168,7 +168,7 @@ Calendar CSS
 }
 .days div:hover:not(.today) {
     background-color: #262626;
-    outline: 0.2rem solid #777;
+    outline: 0.2rem solid rgb(0, 141, 35);
     /* margin: -0.2rem; */
     cursor: pointer;
 }
@@ -179,7 +179,7 @@ Calendar CSS
 }
   
 .today {
-    background-color: #167e56;
+    background-color: #09a351;
 }
 
 
