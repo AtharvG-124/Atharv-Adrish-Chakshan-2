@@ -78,28 +78,30 @@
     
       <div class = "modal-body">
 
-        <form action="" method="POST">
+        <form action="calendarSubmit.php" method="POST">
                 <!-- <label>Date</label> -->
                 <!-- why isn't echo working? -->
 
                 <label>Meal Option</label>
-                <select name="meal">
+                <!-- <select name="meal">
                     <option value =""> --Select--</option>
                     <option value ="Hamburger"> Hamburger</option>
                     <option value ="Pizza"> Pizza </option>
                     <option value ="Grilled Cheese Sandwich"> Grilled Cheese Sandwich </option>
-                </select> <br><br><br>
+                </select> <br><br><br> -->
+                <input type = "text" name = "meal" placeholder = "Enter Your Order"/><br>
 
                 <label>Student ID</label> 
                 <input type = "number" name = "idnum" placeholder = "Enter Your Student ID"/><br>
 
                 <!-- <span class = "date"></span> -->
+                <input type = "submit" class = "subButton" name = "insert" value = "SUBMIT"/>
 
         </form>
 
     </div>
 
-    <input type = "submit" class = "subButton" name = "insert" value = "SUBMIT"/>
+    
 
     </div>
   </div>
@@ -114,29 +116,6 @@
 
 </html>
 <!-- PHP CODE FOR FORM ABOVE BELOW  -->
-<?php
 
-$connection = mysqli_connect("localhost", "root", ""); 
-// , "calendardb", 80);
-$db = mysqli_select_db($connection, 'calendardb');
-if(isset($_POST['insert']))
-{
-    $meal = $_POST['meal'];
-    $idnum = $_POST['idnum'];
-
-    //Embedded SQL
-    $query = "INSERT INTO `testTable`(`meal`, `idnum`) VALUES ('$meal', '$idnum')"; 
-    $query_run = mysqli_query($connection, $query);
-
-    if($query_run)
-    {
-        echo '<script type = "text/javascript"> alert("Your order has been recorded.") </script>';
-    }
-    else
-    {
-        echo '<script type = "text/javascript"> alert("Your order has not been recorded!") </script>';
-    }
-
-}
-
-?>
+  
+ <!-- $db = mysqli_select_db($connection, 'calendardb'); -->
