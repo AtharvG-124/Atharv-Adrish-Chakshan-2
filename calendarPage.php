@@ -116,14 +116,14 @@
 <!-- PHP CODE FOR FORM ABOVE BELOW  -->
 <?php
 
-$connection = mysqli_connect("localhost", "root", "");
-$db = mysqli_select_db($connection, 'calendardb');
+$connection = mysqli_connect("localhost", "root", "", "calendardb", 80);
+// $db = mysqli_select_db($connection, 'calendardb');
 if(isset($_POST['insert']))
 {
     $meal = $_POST['meal'];
     $idnum = $_POST['idnum'];
 
-    //SQL
+    //Embedded SQL
     $query = "INSERT INTO `testTable`(`meal`, `idnum`) VALUES ('$meal', '$idnum')"; 
     $query_run = mysqli_query($connection, $query);
 
