@@ -1,5 +1,5 @@
 <?php
-    $connection = mysqli_connect("localhost", "root", "1234", "calendardb", 80);
+    $connection = mysqli_connect("localhost", "root", "", "calendardb", 3306);
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if(isset($_POST['insert'])) {
             $meal = $_POST['meal'];

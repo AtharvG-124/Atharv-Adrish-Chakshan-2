@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -75,7 +75,33 @@
         <h2> Place Your Order </h2>
         <span class="close cursor" onclick="closeModal()">&times;</span>
       </div>
+    
+      <div class = "modal-body">
 
+        <form action="calendarSubmit.php" method="POST">
+                <!-- <label>Date</label> -->
+                <!-- why isn't echo working? -->
+
+                <label>Meal Option</label>
+                <select name="meal">
+                    <option value =""> --Select--</option>
+                    <option value ="Hamburger"> Hamburger</option>
+                    <option value ="Pizza"> Pizza </option>
+                    <option value ="Grilled Cheese Sandwich"> Grilled Cheese Sandwich </option>
+                </select> <br><br><br>
+                <!-- <input type = "text" name = "meal" placeholder = "Enter Your Order"/><br> -->
+
+                <label>Student ID</label> 
+                <input type = "number" name = "idnum" placeholder = "Enter Your Student ID"/><br>
+
+                <!-- <span class = "date"></span> -->
+                <input type = "submit" class = "subButton" name = "insert" value = "SUBMIT"/>
+
+        </form>
+
+    </div>
+
+    
 
     </div>
   </div>
@@ -89,3 +115,7 @@
 </body>
 
 </html>
+<!-- PHP CODE FOR FORM ABOVE BELOW  -->
+
+  
+ <!-- $db = mysqli_select_db($connection, 'calendardb'); -->
