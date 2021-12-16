@@ -201,17 +201,46 @@ Calendar CSS
     
 }
 
-.modal p{
-    color: crimson;
-}
-
 .close {
-    color: yellow;
+    color: black;
     position: absolute;
     padding-top: 10%;
-    top: 10px;
-    right: 25px;
+    top: -5%;
+    right: 5%; /* relative to the MODAL CONTENT CONTAINER; not the page anymore*/
     font-size: 35px;
     font-weight: bold;
     cursor: pointer;
   }
+
+  .modal-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    
+    right: 30%;
+    top: 15%;
+    width: 40%;
+    height: 60%;
+    pointer-events: auto;
+    background-color: #fff;
+    
+    background-clip: padding-box;
+    
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 0.3rem;
+    outline: 0;
+}
+
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    
+    border-bottom: 1px solid #dee2e6;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(222, 226, 230);
+    border-top-left-radius: calc(0.3rem - 1px);
+    border-top-right-radius: calc(0.3rem - 1px);
+}
