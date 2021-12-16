@@ -47,6 +47,7 @@ const renderCalendar = () => {
   document.querySelector(".date h1").textContent = months[date.getMonth()] + ' (' + date.getFullYear() + ')';
 
   document.querySelector(".date p").innerHTML = new Date().toDateString();
+  // document.querySelector("date-time").innerHTML = new Date().toDateString();
 
   let days = "";
 
@@ -86,6 +87,10 @@ function openModal(){
 function closeModal(){
   document.getElementById("myModal").style.display = "none";
 }
+
+// function getDate(){
+//   return Date().toDateString();
+// }
 
 renderCalendar();
 

@@ -244,3 +244,20 @@ Calendar CSS
     border-top-left-radius: calc(0.3rem - 1px);
     border-top-right-radius: calc(0.3rem - 1px);
 }
+
+.modal-body{
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(222, 226, 230);
+    border-top-left-radius: calc(0.3rem - 1px);
+    border-top-right-radius: calc(0.3rem - 1px);
+}
+
+.subButton{
+    position: absolute;
+    right: 35%;
+    top: 90%;
+    width: 30%;
+}
