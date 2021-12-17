@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
 
     <link
       rel="stylesheet"
@@ -21,71 +21,75 @@
     <!-- <style> </style> -->
 
     <title>Your Calendar</title>
-</head>
-<!-- <body>
+  </head>
+  <!-- <body>
   <h1>Order Food</h1>
 
   
   
 </body> -->
 
-<body>
-
-  <div class="nav_bar">
-
-    <nav>
-         <a href="index.html"><button class="logo">Luncheon</button></a>
-         <a href="login.html" target="_parent"><button class="nav-button">Log In</button></a>
-         <a href="About.html" target="_parent"><button class="nav-button">About</button></a>
-
-     </nav>
-
-  </div>
-
-  <div class="container">
-    <div class="calendar">
-      <div class="month">
-        <i class="fas fa-angle-left prev"></i>
-        <div class="date">
-          <h1></h1>
-          <p></p>
-        </div>
-        <i class="fas fa-angle-right next"></i>
-      </div>
-      <div class="weekdays">
-        <div>Sun</div>
-        <div>Mon</div>
-        <div>Tue</div>
-        <div>Wed</div>
-        <div>Thu</div>
-        <div>Fri</div>
-        <div>Sat</div>
-      </div>
-      <div class="days"></div>
+  <body>
+    <div class="nav_bar">
+      <nav>
+        <a href="index.html"><button class="logo">Luncheon</button></a>
+        <a href="login.html" target="_parent"
+          ><button class="nav-button">Log In</button></a
+        >
+        <a href="About.html" target="_parent"
+          ><button class="nav-button">About</button></a
+        >
+      </nav>
     </div>
-  </div>
 
-
-
-  <div id="myModal" class="modal">
-    <!-- <p>Test</p> -->
-    <div class="modal-content">
-
-      <div class = "modal-header">
-        <h2> Place Your Order </h2>
-        <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="container">
+      <div class="calendar">
+        <div class="month">
+          <i class="fas fa-angle-left prev"></i>
+          <div class="date">
+            <h1></h1>
+            <p></p>
+          </div>
+          <i class="fas fa-angle-right next"></i>
+        </div>
+        <div class="weekdays">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="days"></div>
       </div>
-    
-      <div class = "modal-body">
+    </div>
 
-        <form action="calendarSubmit.php" method="POST">
-                <!-- <label>Date</label> -->
-                <!-- why isn't echo working? -->
-                <label>Date</label> <br>
-                <!-- <p id = "date"></p> -->
-                <input type = "text" id = "date" name = "dateSelected" value = "" disabled/><br><br><br>
-                <!-- <input type = "text" name = "dateSelected" placeholder = "Enter the date"/><br> -->
-                <!-- <script>
+    <div id="myModal" class="modal">
+      <!-- <p>Test</p> -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Place Your Order</h2>
+          <span class="close cursor" onclick="closeModal()">&times;</span>
+        </div>
+
+        <div class="modal-body">
+          <form action="calendarSubmit.php" method="POST">
+            <!-- <label>Date</label> -->
+            <!-- why isn't echo working? -->
+            <label>Date</label> <br />
+            <!-- <p id = "date"></p> -->
+            <input
+              type="text"
+              id="date"
+              name="dateSelected"
+              value=""
+            /><br /><br /><br />
+
+            <!-- <input type="text" name="dateSelected" /><br /><br /><br /> -->
+
+            <!-- <input type = "text" name = "dateSelected" placeholder = "Enter the date"/><br> -->
+            <!-- <script>
                   n = new Date();
                   y = n.getFullYear();
                   m = n.getMonth() + 1;
@@ -93,40 +97,40 @@
                   document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
                 </script> -->
 
-                <label>Meal Option</label><br>
-                <select name="meal">
-                    <option value =""> --Select--</option>
-                    <option value ="Hamburger"> Hamburger</option>
-                    <option value ="Pizza"> Pizza </option>
-                    <option value ="Grilled Cheese Sandwich"> Grilled Cheese Sandwich </option>
-                </select> <br><br><br>
-                <!-- <input type = "text" name = "meal" placeholder = "Enter Your Order"/><br> -->
+            <label>Meal Option</label><br />
+            <select name="meal">
+              <option value="">--Select--</option>
+              <option value="Hamburger">Hamburger</option>
+              <option value="Pizza">Pizza</option>
+              <option value="Grilled Cheese Sandwich">
+                Grilled Cheese Sandwich
+              </option>
+            </select>
+            <br /><br /><br />
+            <!-- <input type = "text" name = "meal" placeholder = "Enter Your Order"/><br> -->
 
-                <label>Student ID</label><br> 
-                <input type = "number" name = "idnum" placeholder = "Enter Your Student ID"/><br>
+            <label>Student ID</label><br />
+            <input
+              type="number"
+              name="idnum"
+              placeholder="Enter Your Student ID"
+            /><br />
 
-                <!-- <span class = "date"></span> -->
-                <input type = "submit" class = "subButton" name = "insert" value = "SUBMIT"/>
-
-        </form>
-
+            <!-- <span class = "date"></span> -->
+            <input
+              type="submit"
+              class="subButton"
+              name="insert"
+              value="SUBMIT"
+            />
+          </form>
+        </div>
+      </div>
     </div>
 
-    
-
-    </div>
-  </div>
-
-
-
-  
-
-  <script src="script.js"></script>
-
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
 <!-- PHP CODE FOR FORM ABOVE BELOW  -->
 
-  
- <!-- $db = mysqli_select_db($connection, 'calendardb'); -->
+<!-- $db = mysqli_select_db($connection, 'calendardb'); -->

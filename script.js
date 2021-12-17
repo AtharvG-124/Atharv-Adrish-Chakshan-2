@@ -44,7 +44,8 @@ const renderCalendar = () => {
     "December",
   ];
 
-  document.querySelector(".date h1").textContent = months[date.getMonth()] + ' (' + date.getFullYear() + ')';
+  document.querySelector(".date h1").textContent =
+    months[date.getMonth()] + " (" + date.getFullYear() + ")";
 
   document.querySelector(".date p").innerHTML = new Date().toDateString();
   // document.querySelector("date-time").innerHTML = new Date().toDateString();
@@ -56,7 +57,11 @@ const renderCalendar = () => {
   }
 
   for (let i = 1; i <= lastDay; i++) {
-    if (i === new Date().getDate() && date.getMonth() === new Date().getMonth() && date.getFullYear() === new Date().getFullYear()){
+    if (
+      i === new Date().getDate() &&
+      date.getMonth() === new Date().getMonth() &&
+      date.getFullYear() === new Date().getFullYear()
+    ) {
       days += `<div class="today" id = ${i} onClick = "reply_click(this.id)">${i}</div>`;
     } else {
       days += `<div id = ${i} onClick = "reply_click(this.id)">${i}</div>`;
@@ -80,17 +85,18 @@ document.querySelector(".next").addEventListener("click", () => {
 });
 
 // Modal Script
-function openModal(){
+function openModal() {
   document.getElementById("myModal").style.display = "block";
 }
 
-function closeModal(){
+function closeModal() {
   document.getElementById("myModal").style.display = "none";
 }
 
-function reply_click(clicked_id){
+function reply_click(clicked_id) {
   openModal();
-  document.getElementById("date").value = (date.getMonth()+1) + "/" + clicked_id + "/" + (date.getFullYear()); 
+  document.getElementById("date").value =
+    date.getMonth() + 1 + "/" + clicked_id + "/" + date.getFullYear();
   // could have been simpler ^^^
 }
 // function getDate(){
@@ -101,6 +107,4 @@ function reply_click(clicked_id){
 //   openModal();
 // });
 
-
 renderCalendar();
-

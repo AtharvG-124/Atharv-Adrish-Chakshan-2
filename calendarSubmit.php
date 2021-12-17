@@ -1,13 +1,15 @@
 <?php
-    $connection = mysqli_connect("localhost", "root", "", "calendardb", 80);
+    $connection = mysqli_connect("localhost", "root", "", "calendardb");
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if(isset($_POST['insert'])) {
-            $dateSelected = (string) $_POST['dateSelected'];
+            $dateSelected = (string) $_POST["dateSelected"];
             $meal = (string) $_POST['meal'];
             $idnum = (int) $_POST['idnum'];
             
+            echo "<script type = \"text/javascript\"> alert(\"$dateSelected\") </script>";
+
             //Embedded SQL
-            $query = "INSERT INTO testTable(idnum, dateSelected, meal) VALUES ($idnum, \"dateSelected\", \"$meal\")"; 
+            $query = "INSERT INTO testtable(idnum, dateSelected, meal) VALUES ($idnum, \"$dateSelected\", \"$meal\")"; 
             // $query = "INSERT INTO testTable(idnum, dateSelected, meal) VALUES (:idnum, :dateSelected, :meal)"; 
             // $query->bindParam(':idnum', $idnum);
             // $query->bindParam(':dateSelected', $dateSelected);
