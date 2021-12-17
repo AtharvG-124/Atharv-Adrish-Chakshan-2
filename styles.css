@@ -1,263 +1,261 @@
 /* Default CSS */
-body{
-
-    background-size: cover;
-    background: #373837;
-    position: relative;
-    bottom: 10px;
-    right: 10px;
-	display: flex;
-	flex-direction: column;
-	letter-spacing: 1px;
-	font-family: "Quicksand", sans-serif;
+body {
+  background-size: cover;
+  background: #373837;
+  position: relative;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 1px;
+  font-family: "Quicksand", sans-serif;
 }
 
-.logo{
-    cursor: pointer;
-    font-family: "Optima", sans-serif;
-    color: green;
-    padding-left: 20px;
-    border: none;
-    font-weight: bold;
-    color: #00e029;
-    font-size:calc(12px + 1.5vw);
-    background: none;
-    float: left;
-
+.logo {
+  cursor: pointer;
+  font-family: "Optima", sans-serif;
+  color: green;
+  padding-left: 20px;
+  border: none;
+  font-weight: bold;
+  color: #00e029;
+  font-size: calc(12px + 1.5vw);
+  background: none;
+  float: left;
 }
 
 nav {
-    position: fixed;
-    z-index: 5;
-    width: 100%;
-    padding-right: 30px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background: rgba(0,0,0,0.5);
-    backdrop-filter: blur(4px);
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
 }
 
-.nav-button{
-    position: relative;
-    cursor: pointer;
-    height: 40px;
-    width: 120px;
-    border: none;
-    border-radius: 10px;
-    color: white;
-    float: right;
-    padding-left: min(10px, 5%);
-    font-family: "Optima", sans-serif;
-    font-size:calc(12px + 6px);
-    margin-left: 10px;
-    background: none;
-    transition: background 0.5s ease-in-out;
-
+.nav-button {
+  position: relative;
+  cursor: pointer;
+  height: 40px;
+  width: 120px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  float: right;
+  padding-left: min(10px, 5%);
+  font-family: "Optima", sans-serif;
+  font-size: calc(12px + 6px);
+  margin-left: 10px;
+  background: none;
+  transition: background 0.5s ease-in-out;
 }
 
-.nav-button:hover{
-    background: #00ba3b;
-    color: white;
-    border-color: #00ba3b;
-    transition-delay: 0.1s;
+.nav-button:hover {
+  background: #00ba3b;
+  color: white;
+  border-color: #00ba3b;
+  transition-delay: 0.1s;
 }
 
-
+.searchUp {
+  position: absolute;
+  /* padding-top: 30%; */
+  margin-top: 50%;
+}
 
 /* 
 Calendar CSS
  */
 
 .container {
-    width: 100%;
-    height: 100vh;
-    float: right;
-    margin-top: 100px;
-    /* background-color: #373837; */
-    color: #eee;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-  
-.calendar {
-    width: 45rem;
-    height: 52rem;
-    background-color: #222227;
-    box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-  
-.month {
-    /* width: 91.15%; */
-    height: 12rem;
-    background-color: #09a351;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-    text-align: center;
-    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-  
-.month i {
-    font-size: 2.5rem;
-    cursor: pointer;
-}
-  
-.month h1 {
-    font-size: 3rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    margin-bottom: 1rem;
-}
-  
-.month p {
-    font-size: 1.6rem;
-}
-  
-.weekdays {
-    height: 5rem;
-    padding: 0 0.4rem;
-    display: flex;
-    align-items: center;
-}
-  
-.weekdays div {
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: 0.1rem;
-    width: calc(44.2rem / 7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-}
-  
-.days {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0.2rem;
-}
-  
-.days div {
-    font-size: 1.4rem;
-    margin: 0.3rem;
-    width: calc(40.2rem / 7);
-    height: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-    transition: background-color 0.2s;
-    border-radius: 25px;
-}
-  
-.days div:hover:not(:not(.today)){
-    background-color: #005207;
-    outline: 0.2rem solid rgb(2, 226, 58);
-    /* margin: -0.2rem; */
-    cursor: pointer;
-}
-.days div:hover:not(.today) {
-    background-color: #262626;
-    outline: 0.2rem solid rgb(0, 141, 35);
-    /* margin: -0.2rem; */
-    cursor: pointer;
-}
-  
-.prev-date,
-.next-date {
-    opacity: 0.5;
-}
-  
-.today {
-    background-color: #09a351;
+  width: 100%;
+  height: 100vh;
+  float: right;
+  margin-top: 100px;
+  /* background-color: #373837; */
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.calendar {
+  width: 45rem;
+  height: 52rem;
+  background-color: #222227;
+  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.month {
+  /* width: 91.15%; */
+  height: 12rem;
+  background-color: #09a351;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  text-align: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.month i {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.month h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.month p {
+  font-size: 1.6rem;
+}
+
+.weekdays {
+  height: 5rem;
+  padding: 0 0.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.weekdays div {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  width: calc(44.2rem / 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.2rem;
+}
+
+.days div {
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  width: calc(40.2rem / 7);
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  transition: background-color 0.2s;
+  border-radius: 25px;
+}
+
+.days div:hover:not(:not(.today)) {
+  background-color: #005207;
+  outline: 0.2rem solid rgb(2, 226, 58);
+  /* margin: -0.2rem; */
+  cursor: pointer;
+}
+.days div:hover:not(.today) {
+  background-color: #262626;
+  outline: 0.2rem solid rgb(0, 141, 35);
+  /* margin: -0.2rem; */
+  cursor: pointer;
+}
+
+.prev-date,
+.next-date {
+  opacity: 0.5;
+}
+
+.today {
+  background-color: #09a351;
+}
 
 /* Modal Container CSS */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1; /*stack order*/
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    -webkit-backdrop-filter: blur(7px);
-    backdrop-filter: blur(7px);
-    background-color: rgba(0, 0, 0, 0.3);
-
-    
+  display: none;
+  position: fixed;
+  z-index: 1; /*stack order*/
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .close {
-    color: black;
-    position: absolute;
-    padding-top: 10%;
-    top: -5%;
-    right: 5%; /* relative to the MODAL CONTENT CONTAINER; not the page anymore*/
-    font-size: 35px;
-    font-weight: bold;
-    cursor: pointer;
-  }
+  color: black;
+  position: absolute;
+  padding-top: 10%;
+  top: -5%;
+  right: 5%; /* relative to the MODAL CONTENT CONTAINER; not the page anymore*/
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-  .modal-content {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    
-    right: 30%;
-    top: 15%;
-    width: 40%;
-    height: 60%;
-    pointer-events: auto;
-    background-color: #fff;
-    
-    background-clip: padding-box;
-    
-    border: 1px solid rgba(0,0,0,.2);
-    border-radius: 0.3rem;
-    outline: 0;
+.modal-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+
+  right: 30%;
+  top: 15%;
+  width: 40%;
+  height: 60%;
+  pointer-events: auto;
+  background-color: #fff;
+
+  background-clip: padding-box;
+
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
 }
 
 .modal-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 1rem 1rem;
-    
-    border-bottom: 1px solid #dee2e6;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: rgb(222, 226, 230);
-    border-top-left-radius: calc(0.3rem - 1px);
-    border-top-right-radius: calc(0.3rem - 1px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+
+  border-bottom: 1px solid #dee2e6;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(222, 226, 230);
+  border-top-left-radius: calc(0.3rem - 1px);
+  border-top-right-radius: calc(0.3rem - 1px);
 }
 
-.modal-body{
-    padding: 1rem 1rem;
-    border-bottom: 1px solid #dee2e6;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: rgb(222, 226, 230);
-    border-top-left-radius: calc(0.3rem - 1px);
-    border-top-right-radius: calc(0.3rem - 1px);
+.modal-body {
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(222, 226, 230);
+  border-top-left-radius: calc(0.3rem - 1px);
+  border-top-right-radius: calc(0.3rem - 1px);
 }
 
-.subButton{
-    position: absolute;
-    right: 35%;
-    top: 90%;
-    width: 30%;
+.subButton {
+  position: absolute;
+  right: 35%;
+  top: 90%;
+  width: 30%;
 }
