@@ -25,29 +25,16 @@
         <h1>Create an account</h1>
 
         <br />
-        <div class="input">
-          <label class="custom-field one">
-            <input class="form-input" type="text" placeholder=" " />
-            <span class="placeholder">First Name</span>
-          </label>
-        </div>
-
-        <br />
-
-        <div class="input">
-          <label class="custom-field one">
-            <input class="form-input" type="text" placeholder=" " />
-            <span class="placeholder">Last Name</span>
-          </label>
-        </div>
-
-        <br />
-
-        <div class="centersub">
+        <form action="test.php" method="post">
           <div class="input">
             <label class="custom-field one">
-              <input class="form-input" type="text" placeholder=" " />
-              <span class="placeholder">Username</span>
+              <input
+                class="form-input"
+                type="text"
+                placeholder=" "
+                name="first_name"
+              />
+              <span class="placeholder">First Name</span>
             </label>
           </div>
 
@@ -55,28 +42,70 @@
 
           <div class="input">
             <label class="custom-field one">
-              <input class="form-input" type="text" placeholder=" " />
-              <span class="placeholder">ID Number</span>
+              <input
+                class="form-input"
+                type="text"
+                placeholder=" "
+                name="last_name"
+              />
+              <span class="placeholder">Last Name</span>
             </label>
           </div>
 
           <br />
 
-          <div class="input">
-            <label class="custom-field one">
-              <input class="form-input" type="password" placeholder=" " />
-              <span class="placeholder">Password</span>
-            </label>
+          <div class="centersub">
+            <div class="input">
+              <label class="custom-field one">
+                <input
+                  class="form-input"
+                  type="text"
+                  placeholder=" "
+                  name="username"
+                />
+                <span class="placeholder">Username</span>
+              </label>
+            </div>
+
+            <br />
+
+            <div class="input">
+              <label class="custom-field one">
+                <input
+                  class="form-input"
+                  type="text"
+                  placeholder=" "
+                  name="id_num"
+                />
+                <span class="placeholder">ID Number</span>
+              </label>
+            </div>
+
+            <br />
+
+            <div class="input">
+              <label class="custom-field one">
+                <input
+                  class="form-input"
+                  type="password"
+                  placeholder=" "
+                  name="password"
+                />
+                <span class="placeholder">Password</span>
+              </label>
+            </div>
+
+            <br />
           </div>
 
-          <br />
-        </div>
+          <div>
+            <!-- <a href="index.html"><button class="submit-button">Create</button></a> -->
+            <input type="submit" />
+          </div>
+        </form>
 
-        <div>
-          <a href="index.html"><button class="submit-button">Create</button></a>
-        </div>
-
-        <!-- <p>Don't have an account? <a href="signup.html">Create one</a></p> -->
+        <p>Don't have an account? <a href="signup.html">Create one</a></p>
+        <!-- <input type="submit" /> -->
       </div>
       <div class="feature_img">
         <img
