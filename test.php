@@ -7,11 +7,11 @@
     $first = (string) $_POST['first_name'];
     $last = (string) $_POST['last_name'];
     $id = (int) $_POST['id_num'];
-    $user = (string) $_POST['username'];
+    $username = (string) $_POST['username'];
     $pwd = (string) $_POST['password'];
 
     $sql = "INSERT INTO user_table (first_name, last_name, id_num, username, passkey)
-    VALUES (\"$first\", \"$last\", $id, \"$user\", \"$pwd\")";
+    VALUES (\"$first\", \"$last\", $id, \"$username\", \"$pwd\")";
 
     if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
