@@ -61,7 +61,7 @@
         <div>Fri</div>
         <div>Sat</div>
       </div>
-      <div class="days" onclick="openModal()"></div>
+      <div class="days"></div>
     </div>
   </div>
 
@@ -81,8 +81,18 @@
         <form action="calendarSubmit.php" method="POST">
                 <!-- <label>Date</label> -->
                 <!-- why isn't echo working? -->
+                <label>Date</label> <br>
+                <!-- <p id = "date"></p> -->
+                <input type = "text" id = "date" name = "dateSelected" value = "" disabled/><br><br><br>
+                <!-- <script>
+                  n = new Date();
+                  y = n.getFullYear();
+                  m = n.getMonth() + 1;
+                  d = n.getDate();
+                  document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+                </script> -->
 
-                <label>Meal Option</label>
+                <label>Meal Option</label><br>
                 <select name="meal">
                     <option value =""> --Select--</option>
                     <option value ="Hamburger"> Hamburger</option>
@@ -91,7 +101,7 @@
                 </select> <br><br><br>
                 <!-- <input type = "text" name = "meal" placeholder = "Enter Your Order"/><br> -->
 
-                <label>Student ID</label> 
+                <label>Student ID</label><br> 
                 <input type = "number" name = "idnum" placeholder = "Enter Your Student ID"/><br>
 
                 <!-- <span class = "date"></span> -->

@@ -57,9 +57,9 @@ const renderCalendar = () => {
 
   for (let i = 1; i <= lastDay; i++) {
     if (i === new Date().getDate() && date.getMonth() === new Date().getMonth() && date.getFullYear() === new Date().getFullYear()){
-      days += `<div class="today">${i}</div>`;
+      days += `<div class="today" id = ${i} onClick = "reply_click(this.id)">${i}</div>`;
     } else {
-      days += `<div>${i}</div>`;
+      days += `<div id = ${i} onClick = "reply_click(this.id)">${i}</div>`;
     }
   }
 
@@ -88,9 +88,19 @@ function closeModal(){
   document.getElementById("myModal").style.display = "none";
 }
 
+function reply_click(clicked_id){
+  openModal();
+  document.getElementById("date").value = (date.getMonth()+1) + "/" + clicked_id + "/" + (date.getFullYear()); 
+  // could have been simpler ^^^
+}
 // function getDate(){
 //   return Date().toDateString();
 // }
+
+// document.querySelector(".days").addEventListener("click", () => {
+//   openModal();
+// });
+
 
 renderCalendar();
 
