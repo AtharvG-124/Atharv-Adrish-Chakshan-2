@@ -7,6 +7,7 @@ body{
     right: 10px;
 	display: flex;
 	flex-direction: none;
+    justify-content: center;
 	letter-spacing: 1px;
 	font-family: "Optima", sans-serif;
 }
@@ -15,7 +16,7 @@ body{
     cursor: pointer;
     font-family: "Optima", sans-serif;
     color: green;
-    padding-left: 20px;
+    padding-left: 30px;
     border: none;
     font-weight: bold;
     color: #00e029;
@@ -25,15 +26,15 @@ body{
 
 }
 
+#owl-demo, img{
 
-#slider{
-    overflow: hidden;
-}
-
-#slider figure img{   
-    width: 101.2%;
-    max-height: 700px;
+    width: 102.5%;
+    max-height: 780px;
     object-fit: cover;
+    margin: 0;
+    background-color: black;
+    opacity: 0.9;
+    overflow: hidden;
     object-position: 10% 50%;
 }
 #slider figure{
@@ -43,9 +44,138 @@ body{
     margin: 0;
 }
 
+* {box-sizing:border-box}
+
+.slideshow-container{
+    position: absolute;
+    
+}
+
+.head-text {
+
+    font-size: 24px;
+    position: absolute;
+    right: 23%;
+    bottom: calc(50% - 23px);
+    width: 50%;
+    
+  }
+
+  .head-text .center{
+
+    padding-top: 20px;
+    height: auto;
+    padding-bottom: 20px;
+    color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 20px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    background: rgba(0,0,0,0.5);
+
+  }
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 1px;
+    border-radius: 100px;
+
+}
+
+.prev {
+    left: 20px;
+    border-radius: 100px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3s;
+    animation-name: fade;
+    animation-duration: 3s;
+
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .2}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .2}
+    to {opacity: 1}
+}
+
+.bounce {
+    position: absolute;
+    left:50%;
+    bottom:0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 15px;
+    margin-top:-25px;
+    margin-left:-25px;
+    color: #fff;
+    height:50px;
+    width:50px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 100%;
+    -webkit-animation:bounce 1s infinite;
+    -moz-animation:bounce 1s infinite;
+    -o-animation:bounce 1s infinite;
+    animation:bounce 1s infinite;
+    
+  }
+  
+  @-webkit-keyframes bounce {
+    0%       { bottom:0px; }
+    50%      { bottom:15px; }
+    100%     {bottom:30;}
+  }
+  
+   @-moz-keyframes bounce {
+    0%       { bottom:0px; }
+    50%      { bottom:15px; }
+    100%     {bottom:30;}
+  }
+  
+   @-o-keyframes bounce {
+    0%       { bottom:0px; }
+    50%      { bottom:15px; }
+    100%     {bottom:30;}
+  }
+  
+   @keyframes bounce {
+    0%       { bottom:0px; }
+    50%      { bottom:15px; }
+    100%     {bottom:30;}
+  }
+
 nav{
     position: fixed;
-    z-index: 5;
+    z-index: 2;
+    left: 0;
     width: 100%;
     padding-right: 30px;
     padding-top: 20px;
@@ -68,16 +198,317 @@ nav{
     padding-left: min(10px, 5%);
     font-family: "Optima", sans-serif;
     font-size:calc(5px + 1vw);
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 10px;
     background: none;
     transition: background 0.5s ease-in-out;
 
 }
 
-.nav-button:hover{
-    background: #009930;
+.button {
+    border: 2px solid #ffffff;
+    height: 80px;
+    width: 500px;
+    font-weight: bold;
+    font-family: "Optima", sans-serif;
+    border-radius: 100px;
+    font-size: 20px;
+    margin-top: 30px;
+    background: none;
     color: white;
-    border-color: #009930;
+    transition: background 0.5s ease-in-out;
+
+}
+
+.button2 {
+    border: 2px solid #00ba6c;
+    height: 80px;
+    width: 500px;
+    font-weight: bold;
+    font-family: "Optima", sans-serif;
+    border-radius: 100px;
+    font-size: 20px;
+    margin-top: 30px;
+    background: #00ba6c;
+    color: white;
+    transition: background 0.5s ease-in-out;
+
+}
+
+.nav-button:hover{
+
+    background: #00ba4d;
+    color: white;
+    border-color: #00ba4d;
     transition-delay: 0.1s;
+}
+
+.button:hover{
+    background: #00ba6c;
+    color: white;
+    border-color: #00ba6c;
+    transition-delay: 0.1s;
+}
+
+.button2:hover{
+
+    background: #0099ff;
+    color: white;
+    border-color: #0099ff;
+    transition-delay: 0.1s;
+    
+}
+
+
+
+.purpose{
+    margin-top: 850px;
+    z-index: 1;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    width: 90%;
+    margin-left: 20px;
+    align-items: center;
+
+}
+
+.content, .purpose{
+
+    z-index: 1;
+    display: flex;
+    flex-grow: 1;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.problem-address,  .audience{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+
+}
+
+.purpose h1{
+    background: linear-gradient(to bottom right, #00e029, #02e1f5);
+     -webkit-text-fill-color: transparent;
+     -webkit-background-clip: text;
+     background-clip: text;
+     width: 80%;
+     font-size: 40px;
+     padding-right: 20px;
+     text-align: center;
+     padding-left: 10px;
+ 
+ }
+
+.content img{
+    
+    border-radius: 50px;
+    max-width: 40%;
+    margin-right: 40px;
+}
+
+.content h1{
+
+    background: linear-gradient(to bottom right, #02f5c0, #0288f5);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+    width: calc(100% / 2);
+    font-size: 40px;
+    padding-right: 20px;
+    padding-left: 40px;
+
+}
+
+.problem-address h1{
+
+    background: linear-gradient(to bottom right, #02e5f5 , #8600e0 );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+    margin-top: 70px;
+    width: 90%;
+    font-size: 35px;
+    padding-right: 20px;
+    padding-left: 10px;
+
+}
+
+.divider{
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.divider img{
+
+    width: 95%;
+
+}
+
+.title{
+
+    background: linear-gradient(to bottom right, #8600e0 , #02e5f5 );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+    font-size: 25px;
+
+}
+
+.works{
+
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+    font-size: 18px;
+}
+
+.works img{
+
+    min-width: 25%;
+    max-width: 30%;
+    border-radius: 100%;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.left{
+
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.left img{
+    
+    margin-left: 15%;
+
+}
+
+.right{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.text{
+
+    width: 50%;
+    margin-left: 50px;
+    color: white;
+    text-align: center;
+    margin-right: 60px;
+}
+
+.text h1{
+
+    font-size: 35px;
+
+}
+
+.one h1{
+
+    background: linear-gradient(to bottom right, #02e5f5 , #0288f5 );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+
+    
+}
+
+.two h1{
+
+    background: linear-gradient(to bottom right, #0273f5 , #02f5c0 50%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+
+}
+
+.three h1{
+
+    background: linear-gradient(to bottom right, #02f5f5 , #00e029 );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+
+}
+
+.audience img{
+
+    width: 102.5%;
+    margin-top: -4px;
+    height: 500px;
+    object-fit: cover;
+    object-position: 10% 50%;
+    z-index: 2;
+
+}
+
+.right-aligned{
+
+    position: absolute;
+    right: -18px;
+    height: 500px;
+    margin-top: -5px;
+    color: #fff;
+    z-index: 4;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 50%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    font-size: 20px;
+    backdrop-filter: blur(4px);
+}
+
+.right-aligned h1{
+
+    color: #00e029;
+    font-size: 40px;
+
+}
+
+.signup{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.signup h1{
+    background: linear-gradient(to right, #00e029 , #00b3e0);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
 }
