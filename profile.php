@@ -78,9 +78,9 @@
         </div>
         
         <div class="order-table">
-            
+            <hr class="divide">
             <h2>Your Orders</h2>
-            <!-- <hr> -->
+            
             <table>
                 <tr>
                     <th class="table-label">Date of Order</th>
@@ -127,6 +127,9 @@
 
                 
             </table>
+            <div class="signup">
+                <a href="calendar.php"><button class="button2">Add to your orders!</button></a>
+            </div>
         </div>
     </div>
 

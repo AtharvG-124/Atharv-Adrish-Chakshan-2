@@ -115,7 +115,7 @@
                 of waste each year in California alone! However, food waste is not the only problem . . .
             </h1>
 
-            <a href="Problem.html"><button class="button">The Rest of The Problem</button></a>
+            <a href="Problem.php"><button class="button">The Rest of The Problem</button></a>
             
 
         </div>
@@ -192,7 +192,7 @@
       
         <div class="signup">
             <h1>Ready to Get Started?</h1>
-            <a href="signup.html"><button class="button2">Sign Up Now!</button></a>
+            <a href="signup.php"><button class="button2">Sign Up Now!</button></a>
         </div>
         <br><br><br><br>
     </div>
