@@ -17,54 +17,119 @@
             color: white;
         }
     </style>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/profile.css">
 </head>
 <body>
     <?php
         include_once 'header.php';
     ?>
 
-    <div class=content>
-        <h1>Profile Page</h1>
-        <!-- <p>test</p> -->
+    <div class="signin">
+        <div class="profile">
+            <div class="profile_pic">
+                <img
+                src="assets/profile_pic.jpeg"
+                alt="Have a good lunch!"
+                />
+            </div>
+            <div class="main">
+
+                <?php
+                    if (isset($_SESSION["useruid"])) {
+                        // echo "before connection";
+                        $serverName = "localhost";
+                        $dBUsername = "root";
+                        $dBPassword = "";
+                        $dBName = "luncheon";
+
+                        $conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
+
+                        if (!$conn) {
+                            die("Connection failed: " . mysqli_connect_error());
+                        }
+                        // echo "after connection";
+                        $username = $_SESSION["useruid"];
+                        $sql = "SELECT * FROM users WHERE usersUid=?";
+
+                        $stmt = $conn->prepare($sql);
+                        $stmt->bind_param("s", $username);
+                        $stmt->execute();
+                        $result = $stmt->get_result();
+
+                        // $result = $conn->query($sql);
+
+                        if ($result->num_rows > 0) {
+                            while($row = $result->fetch_assoc()) {
+                                echo "<h1>Hello " . $row["usersFirstName"] . "!<h1/>";
+                                echo "<hr>";
+                                echo "<p>Full Name: " . $row["usersFirstName"] . " " . $row["usersLastName"] . "<p/>";
+                                echo "<p>Id Number: " . $row["usersIdNum"] . "<p/>";
+                                echo "<p>Username: " . $row["usersUid"] . "<p/>";
+                            }
+                        } else {
+                            echo "0 results";
+                        }
+                        $conn->close();
+                        // echo "<p>Hello there " . $_SESSION["useruid"] . "</p>";
+                    }
+                ?>
+            
+            </div>
+        </div>
         
+        <div class="order-table">
+            
+            <h2>Your Orders</h2>
+            <!-- <hr> -->
+            <table>
+                <tr>
+                    <th class="table-label">Date of Order</th>
+                    <th class="table-label">Menu Item Choosen</th>
+                </tr>
+                <?php
+                    if (isset($_SESSION["useruid"])) {
+                        // echo "before connection";
+                        $serverName = "localhost";
+                        $dBUsername = "root";
+                        $dBPassword = "";
+                        $dBName = "luncheon";
 
-        <?php
-            if (isset($_SESSION["useruid"])) {
-                // echo "before connection";
-                $serverName = "localhost";
-                $dBUsername = "root";
-                $dBPassword = "";
-                $dBName = "luncheon";
+                        $conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
 
-                $conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
+                        if (!$conn) {
+                            die("Connection failed: " . mysqli_connect_error());
+                        }
+                        // echo "after connection";
+                        $userId = $_SESSION["userid"];
+                        $sql = "SELECT * FROM orders WHERE userId=?";
 
-                if (!$conn) {
-                    die("Connection failed: " . mysqli_connect_error());
-                }
-                // echo "after connection";
-                $username = $_SESSION["useruid"];
-                $sql = "SELECT usersFirstName FROM users WHERE usersUid=?";
+                        $stmt = $conn->prepare($sql);
+                        $stmt->bind_param("s", $userId);
+                        $stmt->execute();
+                        $result = $stmt->get_result();
 
-                $stmt = $conn->prepare($sql);
-                $stmt->bind_param("s", $username);
-                $stmt->execute();
-                $result = $stmt->get_result();
+                        // $result = $conn->query($sql);
 
-                // $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                            while($row = $result->fetch_assoc()) {
+                                echo "<tr>";
+                                echo "<th>" . $row["orderDate"] . "</th>";
+                                echo "<th>" . $row["orderItem"] . "</th>";
+                                echo "</tr>";
+                            }
+                        } else {
+                            echo "0 results";
+                        }
+                        $conn->close();
+                        // echo "<p>Hello there " . $_SESSION["useruid"] . "</p>";
+                    }
+                ?>
 
-                if ($result->num_rows > 0) {
-                    while($row = $result->fetch_assoc()) {
-                        echo "<p>Hello " . $row["usersFirstName"] . ".<p/><br/>";
-                      }
-                } else {
-                    echo "0 results";
-                }
-                $conn->close();
-                // echo "<p>Hello there " . $_SESSION["useruid"] . "</p>";
-            }
-        ?>
+                
+            </table>
+        </div>
     </div>
+
 
 
 </body>
