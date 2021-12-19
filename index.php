@@ -9,18 +9,9 @@
 
 </head>
 <body>
-    <div class="nav_bar">
-
-        <nav>
-             <a href="index.html"><button class="logo">Luncheon</button></a>
-             <a href="login.html" target="_blank"><button class="nav-button">Log In</button></a>
-             <a href="About.html" target="_parent"><button class="nav-button">About</button></a>
-             <a href="problem.html" target="_parent"><button class="nav-button">Problem</button></a>
-
- 
-         </nav>
-
-    </div>
+    <?php
+        include_once 'header.php';
+    ?>
 
     <div class="slideshow-container" id="owl-demo">
 
