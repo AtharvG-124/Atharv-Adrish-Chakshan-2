@@ -45,6 +45,31 @@ body{
     
 }
 
+.head-text {
+
+    font-size: 24px;
+    position: absolute;
+    right: 23%;
+    bottom: calc(50% - 23px);
+    width: 50%;
+    
+  }
+
+  .head-text .center{
+
+    padding-top: 20px;
+    height: auto;
+    padding-bottom: 20px;
+    color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 20px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    background: rgba(0,0,0,0.5);
+
+  }
+
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -95,7 +120,51 @@ body{
     to {opacity: 1}
 }
 
-
+.bounce {
+    position: absolute;
+    left:50%;
+    bottom:0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 15px;
+    margin-top:-25px;
+    margin-left:-25px;
+    color: #fff;
+    height:50px;
+    width:50px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 100%;
+    -webkit-animation:bounce 1s infinite;
+    -moz-animation:bounce 1s infinite;
+    -o-animation:bounce 1s infinite;
+    animation:bounce 1s infinite;
+    
+  }
+  
+  @-webkit-keyframes bounce {
+    0%       { bottom:0px; }
+    50%      { bottom:15px; }
+    100%     {bottom:30;}
+  }
+  
+   @-moz-keyframes bounce {
+    0%       { bottom:0px; }
+    50%      { bottom:15px; }
+    100%     {bottom:30;}
+  }
+  
+   @-o-keyframes bounce {
+    0%       { bottom:0px; }
+    50%      { bottom:15px; }
+    100%     {bottom:30;}
+  }
+  
+   @keyframes bounce {
+    0%       { bottom:0px; }
+    50%      { bottom:15px; }
+    100%     {bottom:30;}
+  }
 
 nav{
     position: fixed;
@@ -173,7 +242,7 @@ nav{
 
 }
 
-.benefits, .purpose{
+.content, .purpose{
 
     z-index: 1;
     display: flex;
@@ -185,7 +254,7 @@ nav{
 
 }
 
-.problem-address{
+.problem-address,  .audience{
 
     display: flex;
     flex-direction: column;
@@ -208,14 +277,14 @@ nav{
  
  }
 
-.benefits img{
+.content img{
     
     border-radius: 50px;
     max-width: 40%;
     margin-right: 40px;
 }
 
-.benefits h1{
+.content h1{
 
     background: linear-gradient(to bottom right, #02f5c0, #0288f5);
     -webkit-text-fill-color: transparent;
@@ -244,3 +313,171 @@ nav{
 
 }
 
+.divider{
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.divider img{
+
+    width: 95%;
+
+}
+
+.title{
+
+    background: linear-gradient(to bottom right, #8600e0 , #02e5f5 );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+    font-size: 25px;
+
+}
+
+.works{
+
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.works img{
+
+    min-width: 25%;
+    max-width: 30%;
+    border-radius: 100%;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.left{
+
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.left img{
+    
+    margin-left: 15%;
+
+}
+
+.right{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.text{
+
+    width: 50%;
+    margin-left: 50px;
+    color: white;
+    text-align: center;
+    margin-right: 60px;
+}
+
+.text h1{
+
+    font-size: 35px;
+
+}
+
+.one h1{
+
+    background: linear-gradient(to bottom right, #02e5f5 , #0288f5 );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+
+    
+}
+
+.two h1{
+
+    background: linear-gradient(to bottom right, #0273f5 , #02f5c0 50%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+
+}
+
+.three h1{
+
+    background: linear-gradient(to bottom right, #02f5f5 , #00e029 );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+
+}
+
+.audience img{
+
+    width: 102.5%;
+    margin-top: -4px;
+    height: 500px;
+    object-fit: cover;
+    object-position: 10% 50%;
+    z-index: 2;
+
+}
+
+.right-aligned{
+
+    position: absolute;
+    right: -18px;
+    height: 500px;
+    margin-top: -5px;
+    color: #fff;
+    z-index: 4;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 50%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    font-size: 20px;
+    backdrop-filter: blur(4px);
+}
+
+.right-aligned h1{
+
+    color: #00e029;
+    font-size: 40px;
+
+}
+
+.signup{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.signup h1{
+    background: linear-gradient(to  right, #00e029 , #00b3e0);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+}
