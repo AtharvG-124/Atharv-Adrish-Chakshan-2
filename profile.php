@@ -26,12 +26,42 @@
 
     <div class=content>
         <h1>Profile Page</h1>
-        <p>test</p>
+        <!-- <p>test</p> -->
         
 
         <?php
             if (isset($_SESSION["useruid"])) {
-                echo "<p>Hello there " . $_SESSION["useruid"] . "</p>";
+                // echo "before connection";
+                $serverName = "localhost";
+                $dBUsername = "root";
+                $dBPassword = "";
+                $dBName = "luncheon";
+
+                $conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
+
+                if (!$conn) {
+                    die("Connection failed: " . mysqli_connect_error());
+                }
+                // echo "after connection";
+                $username = $_SESSION["useruid"];
+                $sql = "SELECT usersFirstName FROM users WHERE usersUid=?";
+
+                $stmt = $conn->prepare($sql);
+                $stmt->bind_param("s", $username);
+                $stmt->execute();
+                $result = $stmt->get_result();
+
+                // $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                        echo "<p>Hello " . $row["usersFirstName"] . ".<p/><br/>";
+                      }
+                } else {
+                    echo "0 results";
+                }
+                $conn->close();
+                // echo "<p>Hello there " . $_SESSION["useruid"] . "</p>";
             }
         ?>
     </div>
