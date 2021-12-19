@@ -1,13 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/forms.css" />
     <title>Sign Up</title>
-</head>
-<body>
-    <h1>Create an Account Today!</h1>
-</body>
+  </head>
+  <body>
+    <div class="nav_bar">
+      <nav>
+        <a href="index.html"><button class="logo">Luncheon</button></a>
+        <a href="login.html" target="_parent"
+          ><button class="nav-button">Log In</button></a
+        >
+        <a href="About.html" target="_parent"
+          ><button class="nav-button">About</button></a
+        >
+      </nav>
+    </div>
+
+    <div class="signin">
+      <div class="main">
+        <h1>Create an account</h1>
+        <hr>
+        <form action="test.php" method="post">
+          
+          <div class="name">
+            <div class="input" style="
+              width: 50%;
+              margin-right: 10px;
+            ">
+              <label class="custom-field one">
+                <input
+                  class="form-input"
+                  type="text"
+                  placeholder=" "
+                  name="first_name"
+                />
+                <span class="placeholder">First Name</span>
+              </label>
+            </div>
+            <div class="input" style="
+              width: 50%;
+            ">
+              <label class="custom-field one">
+                <input
+                  class="form-input"
+                  type="text"
+                  placeholder=" "
+                  name="last_name"
+                />
+                <span class="placeholder">Last Name</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="input">
+            <label class="custom-field one">
+              <input
+                class="form-input"
+                type="text"
+                placeholder=" "
+                name="id_num"
+              />
+              <span class="placeholder">ID Number</span>
+            </label>
+          </div>
+
+          <div class="centersub">
+            <div class="input">
+              <label class="custom-field one">
+                <input
+                  class="form-input"
+                  type="text"
+                  placeholder=" "
+                  name="username"
+                />
+                <span class="placeholder">Username</span>
+              </label>
+            </div>
+
+
+            
+
+
+            <div class="input">
+              <label class="custom-field one">
+                <input
+                  class="form-input"
+                  type="password"
+                  placeholder=" "
+                  name="pwd"
+                />
+                <span class="placeholder">Password</span>
+              </label>
+            </div>
+
+            <div class="input">
+              <label class="custom-field one">
+                <input
+                  class="form-input"
+                  type="password"
+                  placeholder=" "
+                  name="pwdRepeat"
+                />
+                <span class="placeholder">Repeat Password</span>
+              </label>
+            </div>
+
+          </div>
+
+          <div>
+            <!-- <a href="index.html"><button class="submit-button">Create</button></a> -->
+            <input class="submit-button" type="submit" />
+          </div>
+        </form>
+
+        <p>Already have an account? <a href="login.html">Log in</a></p>
+        <!-- <input type="submit" /> -->
+      </div>
+      <div class="feature_img">
+        <img
+          src="assets/pexels-rajesh-tp-1633578.jpg"
+          alt="Have a good lunch!"
+          height="450px"
+          width="350px"
+        />
+      </div>
+    </div>
+  </body>
 </html>
