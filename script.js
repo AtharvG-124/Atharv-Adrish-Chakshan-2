@@ -108,3 +108,4 @@ function reply_click(clicked_id) {
 // });
 
 renderCalendar();
+
