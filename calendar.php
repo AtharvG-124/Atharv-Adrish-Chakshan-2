@@ -101,12 +101,12 @@
             <br /><br /><br />
             <!-- <input type = "text" name = "meal" placeholder = "Enter Your Order"/><br> -->
 
-            <label>Student ID</label><br />
+            <!-- <label>Student ID</label><br />
             <input
               type="number"
               name="idnum"
               placeholder="Enter Your Student ID"
-            /><br />
+            /><br /> -->
 
             <!-- <span class = "date"></span> -->
             <input
@@ -119,10 +119,24 @@
         </div>
       </div>
     </div>
+      
+    
 
     <script src="js/script.js"></script>
+    <?php
+      if (isset($_GET["error"])) {
+        if ($_GET["error"] == "none") {
+          echo "<script type = \"text/javascript\"> alert(\"Your order has been recorded!\") </script>";
+        } 
+        else if ($_GET["error"] == "somethingwentwrong") {
+          echo "<script type = \"text/javascript\"> alert(\"Something went wrong. Please try again.\") </script>";
+        } 
+      }
+    ?> 
   </body>
 </html>
+
+
 <!-- PHP CODE FOR FORM ABOVE BELOW  -->
 
 <!-- $db = mysqli_select_db($connection, 'calendardb'); -->

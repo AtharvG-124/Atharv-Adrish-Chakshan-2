@@ -117,7 +117,26 @@ function loginUser($conn, $username, $pwd) {
         session_start();
         $_SESSION["userid"] = $uidExists["usersId"];
         $_SESSION["useruid"] = $uidExists["usersUid"];
+        
         header("location: ../index.php");
         exit();
     }
+}
+
+function createOrder($conn, $first_name, $last_name, $id_num, $username, $pwd) {
+    $sql = "INSERT INTO users (usersFirstName, usersLastName, usersIdNum, usersUid, usersPwd) VALUES (?, ?, ?, ?, ?);"; 
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {   
+        header("location: ../signup.php?error=stmtfailed");
+        exit();
+    }
+
+    $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
+
+    mysqli_stmt_bind_param($stmt, "sssss", $first_name, $last_name, $id_num, $username, $hashedPwd);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header("location: ../signup.php?error=none");
+    exit();
+
 }
