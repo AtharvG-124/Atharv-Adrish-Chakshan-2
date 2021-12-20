@@ -82,7 +82,7 @@
             <br><br><br>
             <div class="signup">
                 <h1>See How We Try to Resolve this Problem!</h1>
-                <a href="about.html"><button class="button2">See Our Solution!</button></a>
+                <a href="about.php"><button class="button2">See Our Solution!</button></a>
             </div>
 
         </div>

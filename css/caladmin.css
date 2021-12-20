@@ -176,7 +176,7 @@ body {
     cursor: pointer;
   }
   .days div:hover:not(.today) {
-    background-color: #262626;
+    background-color: #005225;
     outline: 0.2rem solid rgb(0, 141, 35);
     /* margin: -0.2rem; */
     cursor: pointer;
