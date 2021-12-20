@@ -6,11 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/forms.css" />
     <title>Log in</title>
+    
     <style>
       p {
         color: white;
       }
     </style>
+
+    <script type="text/javascript">
+      var counter = 0;
+      function changeImg() {
+          counter++;
+          var image = document.getElementById('myImg');
+          if (counter % 3 == 0) {
+              image.src = "assets/pexels-daria-shevtsova-704569.jpg";
+          }
+          else if (counter % 3 == 1){
+              image.src = "assets/pexels-trang-doan-1092730.jpg";
+          } else {
+              image.src = "assets/pexels-steve-3789885.jpg"
+          }
+      }
+    </script>
+
   </head>
   <body>
     <?php
@@ -62,11 +80,13 @@
       </div>
       <div class="feature_img">
         <img
+          id="myImg"
           src="assets/pexels-daria-shevtsova-704569.jpg"
           alt="Have a good lunch!"
           style="
             height: 30rem;
           "
+          onclick="changeImg()"
         />
       </div>
     </div>
