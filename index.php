@@ -9,18 +9,9 @@
 
 </head>
 <body>
-    <div class="nav_bar">
-
-        <nav>
-             <a href="index.html"><button class="logo">Luncheon</button></a>
-             <a href="login.html" target="_blank"><button class="nav-button">Log In</button></a>
-             <a href="About.html" target="_parent"><button class="nav-button">About</button></a>
-             <a href="problem.html" target="_parent"><button class="nav-button">Problem</button></a>
-
- 
-         </nav>
-
-    </div>
+    <?php
+        include_once 'header.php';
+    ?>
 
     <div class="slideshow-container" id="owl-demo">
 
@@ -124,7 +115,7 @@
                 of waste each year in California alone! However, food waste is not the only problem . . .
             </h1>
 
-            <a href="Problem.html"><button class="button">The Rest of The Problem</button></a>
+            <a href="Problem.php"><button class="button">The Rest of The Problem</button></a>
             
 
         </div>
@@ -201,7 +192,7 @@
       
         <div class="signup">
             <h1>Ready to Get Started?</h1>
-            <a href="signup.html"><button class="button2">Sign Up Now!</button></a>
+            <a href="signup.php"><button class="button2">Sign Up Now!</button></a>
         </div>
         <br><br><br><br>
     </div>

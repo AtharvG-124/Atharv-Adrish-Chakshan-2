@@ -78,15 +78,19 @@ p {
   line-height: 30px;
   /* text-align: center; */
   width: 100%;
+  font-weight: 400;
 }
 
 img {
-  border-radius: 5%;
-  /* box-shadow: -8px 8px 5px rgb(14, 14, 14); */
-  border: 0.5rem solid #222;
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
+    display: block;
+    border-radius: 100%;
+    /* box-shadow: -8px 8px 5px rgb(14, 14, 14); */
+    border: 0.5rem solid #222;
+    width: 18rem;
+    height: 18rem;
+    object-fit: cover;
+    margin: auto;
+  /* padding-left: 5%; */
 }
 
 h1 {
@@ -249,7 +253,7 @@ h1 {
   color: black;
 }
 
-.feature_img {
+.profile_pic {
   /* margin-right: 0;
   float: right;
   margin: 50px;
@@ -257,6 +261,7 @@ h1 {
   padding: 2%;
   margin: auto;
   width: 50%;
+  height: same-as-wdith;
   flex: 1;
 }
 
@@ -278,6 +283,12 @@ h1 {
   margin-top: 150px;
 }
 
+.profile {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
 .main {
   /* background-color: #222; */
   padding: 5%;
@@ -293,3 +304,80 @@ h1 {
   display: flex;
 }
 
+.order-table {
+    padding-top: 4%;
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
+table {
+    font-family: "Optima", sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-weight: 400;
+  }
+  
+  /* tr:nth-child(even) {
+    background-color: #dddddd;
+  } */
+
+.table-label {
+    font-weight: bold;
+}
+
+.divide {
+    border: none;
+    border-top: 3px double rgb(208, 208, 208);
+    color: rgb(220, 220, 220);
+    overflow: visible;
+    text-align: center;
+    height: 10px;
+}
+
+.button2 {
+    border: 2px solid #00ba6c;
+    height: 50px;
+    width: 500px;
+    font-weight: 500;
+    font-family: "Optima", sans-serif;
+    border-radius: 100px;
+    font-size: 20px;
+    margin-top: 30px;
+    margin: 10% auto;
+    background: #00ba6c;
+    color: white;
+    transition: background 0.5s ease-in-out;
+  
+  }
+  
+  
+  .button2:hover{
+  
+    background: #0099ff;
+    color: white;
+    border-color: #0099ff;
+    transition-delay: 0.1s;
+    
+  }
+
+  .signup{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .signup h1{
+    background: linear-gradient(to right, #00e029 , #00b3e0);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+  }
