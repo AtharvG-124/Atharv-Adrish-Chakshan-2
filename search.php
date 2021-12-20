@@ -18,7 +18,7 @@
         echo $request;
 
 
-        $query = "SELECT idnum, dateSelected, meal FROM testTable" 
+        $query = "SELECT idnum, dateSelected, meal FROM testTable"; 
         // -- WHERE meal == \"$hmbr\""; 
         // WHERE meal == " . $request;
         $result = mysqli_query($connection, $query);

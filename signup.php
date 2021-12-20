@@ -6,25 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/forms.css" />
     <title>Sign Up</title>
+    
+    <style>
+      p {
+        color: white;
+      }
+    </style>
+
+    <script type="text/javascript">
+      var counter = 0;
+      function changeImg() {
+          counter++;
+          var image = document.getElementById('myImg');
+          if (counter % 3 == 0) {
+              image.src = "assets/pexels-rajesh-tp-1633578.jpg";
+          }
+          else if (counter % 3 == 1){
+              image.src = "assets/pexels-julie-aagaard-2097090.jpg";
+          } else {
+              image.src = "assets/pexels-william-choquette-2641886.jpg"
+          }
+      }
+    </script>
+
   </head>
   <body>
-    <div class="nav_bar">
-      <nav>
-        <a href="index.html"><button class="logo">Luncheon</button></a>
-        <a href="login.html" target="_parent"
-          ><button class="nav-button">Log In</button></a
-        >
-        <a href="About.html" target="_parent"
-          ><button class="nav-button">About</button></a
-        >
-      </nav>
-    </div>
+    <?php
+        include_once 'header.php';
+    ?>
 
     <div class="signin">
       <div class="main">
         <h1>Create an account</h1>
         <hr>
-        <form action="test.php" method="post">
+        <form action="includes/signup.inc.php" method="post">
           
           <div class="name">
             <div class="input" style="
@@ -60,7 +75,7 @@
             <label class="custom-field one">
               <input
                 class="form-input"
-                type="text"
+                type="number"
                 placeholder=" "
                 name="id_num"
               />
@@ -75,7 +90,7 @@
                   class="form-input"
                   type="text"
                   placeholder=" "
-                  name="username"
+                  name="uid"
                 />
                 <span class="placeholder">Username</span>
               </label>
@@ -113,21 +128,50 @@
 
           <div>
             <!-- <a href="index.html"><button class="submit-button">Create</button></a> -->
-            <input class="submit-button" type="submit" />
+            <button class="submit-button" type="submit" name="submit">Create</button>
           </div>
         </form>
 
-        <p>Already have an account? <a href="login.html">Log in</a></p>
+        <p>Already have an account? <a href="login.php">Log in</a></p>
         <!-- <input type="submit" /> -->
+
+        <?php
+          if (isset($_GET["error"])) {
+              if ($_GET["error"] == "emptyinput") {
+                  echo "<p style='color:red'>*Fill in all fields!</p>";
+              } 
+              else if ($_GET["error"] == "invaliduid") {
+                  echo "<p style='color:red'>*Choose a proper username!</p>";
+              } 
+              else if ($_GET["error"] == "invalideIdNum") {
+                  echo "<p style='color:red'>*Enter a valid ID Number!</p>";
+              } 
+              else if ($_GET["error"] == "passwordsdontmatch") {
+                  echo "<p style='color:red'>*Passwords doesn't match!</p>";
+              } 
+              else if ($_GET["error"] == "stmtfailed") {
+                  echo "<p style='color:red'>*Something went wrong, try again.</p>";
+              }
+              else if ($_GET["error"] == "usernametaken") {
+                  echo "<p style='color:red'>*Username already taken!</p>";
+              }
+              else if ($_GET["error"] == "none") {
+                  echo "<p style='color:#00ba3b'>*You have signed up! Please log in!</p>";
+              }
+          }
+        ?>
       </div>
       <div class="feature_img">
         <img
+          id='myImg'
           src="assets/pexels-rajesh-tp-1633578.jpg"
           alt="Have a good lunch!"
           height="450px"
           width="350px"
+          onclick="changeImg()"
         />
       </div>
+      
     </div>
   </body>
 </html>
