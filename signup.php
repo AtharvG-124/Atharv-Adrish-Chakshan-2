@@ -75,7 +75,7 @@
             <label class="custom-field one">
               <input
                 class="form-input"
-                type="text"
+                type="number"
                 placeholder=" "
                 name="id_num"
               />
