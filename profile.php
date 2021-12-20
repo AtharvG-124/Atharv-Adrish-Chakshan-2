@@ -37,11 +37,8 @@
                 <?php
                     if (isset($_SESSION["useruid"])) {
                         // echo "before connection";
-                        $serverName = "localhost";
-                        $dBUsername = "root";
-                        $dBPassword = "";
-                        $dBName = "luncheon";
-
+                        
+                        require_once 'connectionInfo.php';
                         $conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
 
                         if (!$conn) {

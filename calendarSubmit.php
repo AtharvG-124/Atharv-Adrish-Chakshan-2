@@ -1,7 +1,7 @@
 <?php
 
 if(isset($_POST['insert'])) {
-
+    
     session_start();
 
     $dateSelected = (string) $_POST["dateSelected"];
@@ -15,12 +15,12 @@ if(isset($_POST['insert'])) {
     echo "after";
 
     // require_once 'dbh.inc.php';
-    
+    require_once 'connectionInfo.php';
 
-    $serverName = "localhost";
-    $dBUsername = "root";
-    $dBPassword = "";
-    $dBName = "luncheon";
+    // $serverName = "localhost";
+    // $dBUsername = "root";
+    // $dBPassword = "";
+    // $dBName = "luncheon";
 
     $conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
 

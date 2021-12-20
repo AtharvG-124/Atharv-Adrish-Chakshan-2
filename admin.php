@@ -19,17 +19,86 @@
       rel="stylesheet"
     />
 
+    <style>
+      .p{
+        color: white;
+      }
+
+      .h1{
+        color: white;
+      }
+
+      .searchUp {
+        position: absolute;
+        /* padding-top: 30%; */
+        margin-left: 5%;
+        margin-top: 10%;
+        color: white;
+      } 
+
+      .results{
+        position: absolute;
+        margin-left: 5%;
+        margin-top: 15%;
+        padding-bottom: 1.5rem;
+      }
+      .order-table {
+        padding-top: 4%;
+        display: block;
+        width: 80%;
+        margin: auto;
+      }
+
+      table {
+          font-family: "Optima", sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+      }
+  
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        font-weight: 400;
+      }
+  
+      /* tr:nth-child(even) {
+        background-color: #dddddd;
+      } */
+
+      .table-label {
+          font-weight: bold;
+          color: white;
+      }
+
+      .table-row{
+        color:white;
+      }
+    </style>
+</head>
     <body>
       <?php
           include_once 'header.php';
       ?>
       <div class="searchUp">
         <form action="search.php" method="POST">
-          Meal Filter:
+          Menu Item Filter:
           <input type="text" name="meal" />
           <input type="submit" />
         </form>
+        <br>
+
+      </div>
+      <div class = "results">
+        <table>
+          <tr>
+              <th class="table-label">First Name</th>
+              <th class="table-label">Last Name</th>
+              <th class="table-label">Username</th>
+              <th class="table-label">Student ID</th>
+              <th class="table-label">Date of Order</th>
+              <th class="table-label">Menu Item Choosen</th>
+          </tr>
       </div>
     </body>
-  </head>
 </html>
