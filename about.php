@@ -215,7 +215,7 @@
                     <h2 style="color: mediumturquoise;">Atharv Gupta</h2>
                     <h3 style="color: rgb(30, 241, 111);">Content Specialist</h3>
                     <p>
-                        Heyo, my name is Atharv and I was responsibel for giving the website it's looks 
+                        Heyo, my name is Atharv and I was responsible for giving the website it's looks 
                         and made sure that everything was working as smoothly as possible.
                     </p>
                 </div>
