@@ -21,9 +21,10 @@
 
         $query = "SELECT orders.orderItem, orders.orderDate, users.usersFirstName, users.usersLastName, users.usersIdNum, users.usersUid  
                     FROM orders, users 
-                    WHERE ((orders.userId = users.usersUid) and (orderItem LIKE \"%{$request}%\"))
+                    WHERE ((orders.userId = users.usersId) and (orderItem LIKE \"%{$request}%\"))
                     ORDER BY orders.orderDate"; 
         // -- WHERE meal == \"$hmbr\""; 
+
         // WHERE meal == " . $request;
         $result = mysqli_query($conn, $query);
         // $result = $conn
