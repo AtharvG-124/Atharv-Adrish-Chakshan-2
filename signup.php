@@ -6,11 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/forms.css" />
     <title>Sign Up</title>
+    
     <style>
       p {
         color: white;
       }
     </style>
+
+    <script type="text/javascript">
+      var counter = 0;
+      function changeImg() {
+          counter++;
+          var image = document.getElementById('myImg');
+          if (counter % 3 == 0) {
+              image.src = "assets/pexels-rajesh-tp-1633578.jpg";
+          }
+          else if (counter % 3 == 1){
+              image.src = "assets/pexels-julie-aagaard-2097090.jpg";
+          } else {
+              image.src = "assets/pexels-william-choquette-2641886.jpg"
+          }
+      }
+    </script>
+
   </head>
   <body>
     <?php
@@ -145,10 +163,12 @@
       </div>
       <div class="feature_img">
         <img
+          id='myImg'
           src="assets/pexels-rajesh-tp-1633578.jpg"
           alt="Have a good lunch!"
           height="450px"
           width="350px"
+          onclick="changeImg()"
         />
       </div>
       
