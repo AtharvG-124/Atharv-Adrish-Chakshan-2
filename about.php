@@ -157,13 +157,13 @@
 
                        <br><br>
 
-                       Food waste will be avoided since the Administraters know how much food is needed for the day. 
-                       The Administraters can see what the students have ordered. 
+                       Food waste will be avoided since the administrators know how much food is needed for the day. 
+                       The administrators can see what the students have ordered. 
                        This would allow them to have a better estimate. 
 
                        <br><br>
 
-                       Better food estimates would lead less money being spent on food. This would allow Administraters to 
+                       Better food estimates would lead less money being spent on food. This would allow administrators to 
                        improve the quality of the food they serve since they have some extra money.
 
                     </p>
