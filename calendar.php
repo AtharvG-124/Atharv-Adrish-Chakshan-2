@@ -18,16 +18,12 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <!-- <style> </style> -->
+    <style> 
+    
+    </style>
 
     <title>Your Calendar</title>
   </head>
-  <!-- <body>
-  <h1>Order Food</h1>
-
-  
-  
-</body> -->
 
   <body>
     <?php
@@ -58,7 +54,7 @@
     </div>
 
     <div id="myModal" class="modal">
-      <!-- <p>Test</p> -->
+
       <div class="modal-content">
         <div class="modal-header">
           <h2>Place Your Order</h2>
@@ -67,27 +63,15 @@
 
         <div class="modal-body">
           <form action="calendarSubmit.php" method="POST">
-            <!-- <label>Date</label> -->
-            <!-- why isn't echo working? -->
+
             <label>Date</label> <br />
-            <!-- <p id = "date"></p> -->
+
             <input
               type="text"
               id="date"
               name="dateSelected"
               value=""
             /><br /><br /><br />
-
-            <!-- <input type="text" name="dateSelected" /><br /><br /><br /> -->
-
-            <!-- <input type = "text" name = "dateSelected" placeholder = "Enter the date"/><br> -->
-            <!-- <script>
-                  n = new Date();
-                  y = n.getFullYear();
-                  m = n.getMonth() + 1;
-                  d = n.getDate();
-                  document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
-                </script> -->
 
             <label>Meal Option</label><br />
             <select name="meal">
@@ -99,16 +83,7 @@
               </option>
             </select>
             <br /><br /><br />
-            <!-- <input type = "text" name = "meal" placeholder = "Enter Your Order"/><br> -->
 
-            <!-- <label>Student ID</label><br />
-            <input
-              type="number"
-              name="idnum"
-              placeholder="Enter Your Student ID"
-            /><br /> -->
-
-            <!-- <span class = "date"></span> -->
             <input
               type="submit"
               class="subButton"
@@ -136,7 +111,3 @@
   </body>
 </html>
 
-
-<!-- PHP CODE FOR FORM ABOVE BELOW  -->
-
-<!-- $db = mysqli_select_db($connection, 'calendardb'); -->

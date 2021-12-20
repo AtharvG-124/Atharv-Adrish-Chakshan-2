@@ -127,13 +127,13 @@
           </div>
 
           <div>
-            <!-- <a href="index.html"><button class="submit-button">Create</button></a> -->
+
             <button class="submit-button" type="submit" name="submit">Create</button>
           </div>
         </form>
 
         <p>Already have an account? <a href="login.php">Log in</a></p>
-        <!-- <input type="submit" /> -->
+
 
         <?php
           if (isset($_GET["error"])) {

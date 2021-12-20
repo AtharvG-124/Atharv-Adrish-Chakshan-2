@@ -30,7 +30,6 @@
 
       .searchUp {
         position: absolute;
-        /* padding-top: 30%; */
         margin-left: 5%;
         margin-top: 10%;
         color: white;
@@ -61,10 +60,6 @@
         padding: 8px;
         font-weight: 400;
       }
-  
-      /* tr:nth-child(even) {
-        background-color: #dddddd;
-      } */
 
       .table-label {
           font-weight: bold;

@@ -14,13 +14,7 @@ if(isset($_POST['insert'])) {
     print_r($_SESSION);
     echo "after";
 
-    // require_once 'dbh.inc.php';
     require_once 'connectionInfo.php';
-
-    // $serverName = "localhost";
-    // $dBUsername = "root";
-    // $dBPassword = "";
-    // $dBName = "luncheon";
 
     $conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
 
@@ -33,7 +27,6 @@ if(isset($_POST['insert'])) {
     $sql = "INSERT INTO orders (orderDate, orderItem, userId) VALUES (?,?,?)";
     $stmt= $conn->prepare($sql);
     $stmt->bind_param("ssi", $dateSelected, $meal, $userId);
-    // $stmt->execute();
 
     if($stmt->execute()) {
         header("location: calendar.php?error=none");
@@ -43,7 +36,7 @@ if(isset($_POST['insert'])) {
         header("location: calendar.php?error=somethingwentwrong");
         exit();
     }
-    // $conn->close();
+
     header("location: calendar.php");
     exit();
 
