@@ -17,7 +17,7 @@
         $query = "SELECT orders.orderItem, orders.orderDate, users.usersFirstName, users.usersLastName, users.usersIdNum, users.usersUid  
                     FROM orders, users 
                     WHERE ((orders.userId = users.usersId) and (orderItem LIKE \"%{$request}%\"))
-                    ORDER BY orders.orderDate"; 
+                    ORDER BY users.usersLastName"; 
 
         $result = mysqli_query($conn, $query);
         
