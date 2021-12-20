@@ -8,7 +8,7 @@
     <title>About Us</title>
 
     <style>
-
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap%27');
         body{
             display: flex;
             flex-direction: column;

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap%27');
 body {
     background-size: cover;
     background: #373837;
@@ -12,7 +13,7 @@ body {
   
   .logo {
     cursor: pointer;
-    font-family: "Optima", sans-serif;
+    font-family: "Quicksand", sans-serif;
     color: green;
     padding-left: 20px;
     border: none;
@@ -44,7 +45,7 @@ body {
     color: white;
     float: right;
     padding-left: min(10px, 5%);
-    font-family: "Optima", sans-serif;
+    font-family: "Quicksand", sans-serif;
     font-size: calc(12px + 6px);
     margin-left: 10px;
     background: none;

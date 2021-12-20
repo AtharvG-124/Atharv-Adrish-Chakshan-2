@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Your Profile</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap%27');
         .content{
             padding-top: 150px;
             display: block;
@@ -37,7 +38,7 @@
                 <?php
                     if (isset($_SESSION["useruid"])) {
                         // echo "before connection";
-                        
+
                         require_once 'connectionInfo.php';
                         $conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
 
