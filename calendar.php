@@ -80,6 +80,12 @@
               <option value="Grilled Cheese Sandwich">
                 Grilled Cheese Sandwich
               </option>
+              <option value="Caesar">Caesar Salad</option>
+              <option value="Pasta">Pasta</option>
+              <option value="Burrito">Burrito</option>
+              <option value="Butter Chicken and Naan">Butter Chicken and Naan</option>
+              <option value="Samosa">Samosa</option>
+              <option value="Lasagna">Lasagna</option>
             </select>
             <br /><br /><br />
 
