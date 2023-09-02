@@ -1,5 +1,5 @@
-# Atharv-Adrish-Chakshan-2
-Objective: A platform that allows students to order lunch through a shcool website on a daily basis. 
+# Luncheon
+Objective: A platform that allows students to order lunch through a school website on a daily basis. 
 
 Areas:
   Common Templates:
